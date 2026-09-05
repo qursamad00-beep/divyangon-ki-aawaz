@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="दिव्यांगों की आवाज़ — एक आवाज़ • एक हक़ • एक उम्मीद">
+<title>दिव्यांगों की आवाज़ | Official Song</title>
+<style>
+:root{--bg:#070707;--card:#111;--text:#fff;--muted:#bdbdbd;--accent:#ffb300;--red:#ef2b1f}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% 0,#2a1605 0,#090909 38%,#050505 100%);color:var(--text);font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}
+a{text-decoration:none;color:inherit}
+.nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:14px 5%;background:rgba(0,0,0,.72);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff12}
+.logo{font-weight:900;letter-spacing:.5px}.logo span{color:var(--accent)}
+.nav a{margin-left:18px;color:#ddd;font-size:14px}.nav a:hover{color:#fff}
+.hero{min-height:100svh;display:grid;place-items:center;padding:95px 20px 40px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.35),rgba(0,0,0,.88)),url("assets/poster.png") center/cover;filter:blur(1px);transform:scale(1.03);opacity:.48}
+.hero-inner{position:relative;z-index:1;width:min(1120px,100%);display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:48px;align-items:center}
+.badge{display:inline-block;padding:7px 13px;border:1px solid #ffffff2b;border-radius:999px;background:#ffffff0d;font-size:13px;color:#ffd56a}
+h1{font-size:clamp(42px,7vw,82px);line-height:.98;margin:16px 0 18px;font-weight:950}
+h1 em{display:block;color:var(--accent);font-style:normal}
+.tag{font-size:clamp(18px,2.4vw,28px);font-weight:700;margin-bottom:12px}
+.sub{color:#d2d2d2;max-width:620px;font-size:17px;line-height:1.7}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}
+.btn{padding:13px 19px;border-radius:12px;font-weight:800;border:1px solid #ffffff1f;background:#ffffff0b}
+.btn.primary{background:linear-gradient(135deg,#ffcc43,#ff8a00);color:#111;border:0}
+.btn:hover{transform:translateY(-1px)}
+.poster{width:100%;max-width:390px;border-radius:22px;display:block;box-shadow:0 30px 90px #000,0 0 0 1px #ffffff1a}
+section{padding:80px 20px}.wrap{width:min(1100px,100%);margin:auto}
+.title{text-align:center;font-size:36px;margin:0 0 12px}.lead{text-align:center;color:var(--muted);margin:0 auto 35px;max-width:720px;line-height:1.7}
+.player{background:linear-gradient(145deg,#151515,#0d0d0d);border:1px solid #ffffff14;border-radius:22px;padding:25px;box-shadow:0 20px 50px #0008}
+.player-top{display:flex;gap:18px;align-items:center}.mini{width:90px;height:90px;object-fit:cover;border-radius:14px}
+.player h3{margin:0 0 5px;font-size:22px}.player p{margin:0;color:#aaa}
+audio{width:100%;margin-top:22px}
+.platforms{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:25px}
+.platform{padding:18px;border-radius:16px;background:#101010;border:1px solid #ffffff12;text-align:center;font-weight:800}.platform small{display:block;color:#999;font-weight:500;margin-top:5px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:25px;border-radius:18px;background:#101010;border:1px solid #ffffff12}.card h3{margin-top:0}.card p{color:#aaa;line-height:1.7}
+.quote{font-size:clamp(28px,5vw,52px);font-weight:950;text-align:center;line-height:1.15}.quote span{color:var(--accent)}
+footer{padding:35px 20px;text-align:center;color:#888;border-top:1px solid #ffffff10}.share{margin-top:18px}
+@media(max-width:800px){.nav .links{display:none}.hero-inner{grid-template-columns:1fr;text-align:center}.hero .sub{margin:auto}.actions{justify-content:center}.poster{max-width:330px;margin:auto}.platforms{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}section{padding:60px 18px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="logo">दिव्यांगों की <span>आवाज़</span></div>
+  <div class="links"><a href="#song">गाना</a><a href="#video">वीडियो</a><a href="#message">संदेश</a><a href="#share">Share</a></div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="badge">🎵 OFFICIAL SONG</div>
+      <h1>दिव्यांगों की <em>आवाज़</em></h1>
+      <div class="tag">एक आवाज़ • एक हक़ • एक उम्मीद ❤️</div>
+      <p class="sub">समझिए • साथ दीजिए • बदलाव बनिए — यह गीत सम्मान, समानता और उम्मीद की आवाज़ है।</p>
+      <div class="actions">
+        <a class="btn primary" href="#song">▶ अभी सुनें</a>
+        <button class="btn" onclick="shareSong()">↗ शेयर करें</button>
+      </div>
+    </div>
+    <img class="poster" src="assets/poster.png" alt="दिव्यांगों की आवाज़ Official Song Poster">
+  </div>
+</header>
+
+<section id="song">
+<div class="wrap">
+  <h2 class="title">🎧 गाना सुनें</h2>
+  <p class="lead">अपना volume बढ़ाइए और संदेश को महसूस कीजिए।</p>
+  <div class="player">
+    <div class="player-top">
+      <img class="mini" src="assets/poster.png" alt="">
+      <div><h3>दिव्यांगों की आवाज़</h3><p>Official Song • 4:38</p></div>
+    </div>
+    <audio controls preload="metadata">
+      <source src="assets/song.mp3" type="audio/mpeg">
+      आपका ब्राउज़र audio playback support नहीं करता।
+    </audio>
+  </div>
+  <div class="platforms">
+    <a class="platform" href="https://open.spotify.com/album/76Fw27EaXay2WOA8Am3NTe?si=V7_MEjqrSxiJI8t8N1ENYw&utm_source=copy-link" target="_blank" rel="noopener">Spotify<small>Listen Now</small></a>
+    <a class="platform" href="#" onclick="comingSoon(event)">JioSaavn<small>Listen Now</small></a>
+    <a class="platform" href="https://www.instagram.com/reels/audio/825478090591572/" target="_blank" rel="noopener">Instagram<small>Official Audio</small></a>
+    <a class="platform" href="#" onclick="comingSoon(event)">Facebook<small>Share</small></a>
+  </div>
+</div>
+</section>
+
+
+<section id="video">
+<div class="wrap">
+  <h2 class="title">🎬 Official Song Video</h2>
+  <p class="lead">“दिव्यांगों की आवाज़” का Official YouTube Video देखें।</p>
+  <div style="position:relative;padding-top:56.25%;border-radius:22px;overflow:hidden;background:#000;box-shadow:0 20px 50px #0008;border:1px solid #ffffff14">
+    <iframe src="https://www.youtube.com/embed/IXI5yyeS5c4"
+      title="Divyangon Ki Awaaz - Official Song"
+      style="position:absolute;inset:0;width:100%;height:100%;border:0"
+      allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share"
+      allowfullscreen></iframe>
+  </div>
+  <div class="actions" style="justify-content:center;margin-top:22px">
+    <a class="btn primary" href="https://youtu.be/IXI5yyeS5c4" target="_blank" rel="noopener">▶ YouTube पर देखें</a>
+  </div>
+</div>
+</section>
+
+<section id="message">
+<div class="wrap">
+  <h2 class="title">❤️ हमारा संदेश</h2>
+  <p class="lead">हर व्यक्ति की आवाज़ मायने रखती है। सम्मान, अवसर और समान अधिकार के लिए मिलकर आवाज़ उठाइए।</p>
+  <div class="cards">
+    <div class="card"><h3>❤️ समझिए</h3><p>दिव्यांगता को संवेदनशीलता, सम्मान और समझ के साथ देखिए।</p></div>
+    <div class="card"><h3>🤝 साथ दीजिए</h3><p>समान अवसर और सम्मानजनक व्यवहार के लिए अपना सहयोग दीजिए।</p></div>
+    <div class="card"><h3>💙 बदलाव बनिए</h3><p>एक छोटी सकारात्मक पहल भी समाज में बड़ा बदलाव ला सकती है।</p></div>
+  </div>
+</div>
+</section>
+
+<section id="share">
+<div class="wrap">
+  <div class="quote">“<span>एक आवाज़</span> • एक हक़ • एक उम्मीद”</div>
+  <div class="actions" style="justify-content:center">
+    <button class="btn primary" onclick="shareSong()">📲 अपने दोस्तों को शेयर करें</button>
+  </div>
+</div>
+</section>
+
+<footer>© 2026 दिव्यांगों की आवाज़ • Official Song Website</footer>
+
+<script>
+function shareSong(){
+  const data={title:"दिव्यांगों की आवाज़",text:"🎵 दिव्यांगों की आवाज़ — एक आवाज़ • एक हक़ • एक उम्मीद ❤️",url:location.href};
+  if(navigator.share) navigator.share(data);
+  else {navigator.clipboard?.writeText(location.href); alert("Website link copy हो गया।");}
+}
+function comingSoon(e){e.preventDefault();alert("यह platform link अभी जोड़ना बाकी है।");}
+</script>
+</body>
+</html>
